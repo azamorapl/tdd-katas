@@ -19,11 +19,8 @@ public class NumberParser {
 
     private void findNumbers() {
         String regex = buildRegex();
-        System.out.println(regex);
         String[] numberArray = numberString.split(regex);
-        System.out.println(numberString);
         for (String number : numberArray) {
-            System.out.println(number);
             numbers.add(Integer.parseInt(number));
         }
     }
