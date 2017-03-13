@@ -1,0 +1,3 @@
+rootProject.name = 'tdd-katas'
+include 'string-calculator'
+

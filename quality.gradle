@@ -1,0 +1,68 @@
+allprojects {
+    apply plugin: 'jacoco'
+
+    jacoco {
+        toolVersion = "0.7.7.201606060606"
+    }
+
+    tasks.withType(JacocoReport) {
+        group = "Reporting"
+        sourceDirectories = files([
+                'src/main/java',
+        ])
+        reports {
+            xml.enabled true
+            html.enabled false
+            csv.enabled false
+        }
+    }
+
+    apply plugin: 'pmd'
+
+    tasks.withType(Pmd) {
+        ignoreFailures = true
+        reports {
+            xml.enabled = true
+            html.enabled = false
+        }
+    }
+
+    apply plugin: 'jdepend'
+
+    tasks.withType(JDepend) {
+        reports {
+            xml.enabled = true
+        }
+    }
+}
+
+subprojects{
+    apply plugin: "info.solidsoft.pitest"
+
+    pitest {
+        outputFormats = ['XML', 'HTML']
+    }
+}
+
+apply plugin: "org.sonarqube"
+
+subprojects {
+    sonarqube {
+        properties {
+            property "sonar.sourceEncoding", "UTF-8"
+            property "sonar.scm.provider", "git"
+            property "sonar.sources", "src/main"
+            property "sonar.tests", "src/test"
+            property "sonar.java.binaries", "build/classes/main"
+            property "sonar.java.test.binaries", "build/classes/test"
+            property "sonar.jacoco.reportsPath", "build/jacoco/test.exec"
+            property "sonar.junit.reportsPath", "build/test-results/test"
+        }
+    }
+}
+
+task 'create-dirs' << {
+    sourceSets.all { set ->
+        set.allSource.srcDirs.each {it.mkdirs()}
+    }
+}
