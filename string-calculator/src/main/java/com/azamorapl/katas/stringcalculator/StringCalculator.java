@@ -17,7 +17,8 @@ public class StringCalculator {
     public void add(String inputString) {
         sum = 0;
         negatives = new ArrayList<>();
-        if (!inputString.isEmpty()) parse(inputString);
+        if (!inputString.isEmpty())
+            parse(inputString);
     }
 
     public int getSum() {
@@ -40,8 +41,10 @@ public class StringCalculator {
     }
 
     private void addIfValid(int number){
-        if (number < 0) negatives.add(String.valueOf(number));
-        if (number < 1000) sum += number;
+        if (number < 0)
+            negatives.add(String.valueOf(number));
+        if (number < 1000)
+            sum += number;
     }
 
 

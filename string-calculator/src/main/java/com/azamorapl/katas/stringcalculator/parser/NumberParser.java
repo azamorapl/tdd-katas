@@ -26,14 +26,14 @@ public class NumberParser {
     }
 
     private String buildRegex(){
-        String regex = "";
+        StringBuilder regex = new StringBuilder();
         for (String delimiter : delimiters) {
-            if (!regex.isEmpty()) {
-                regex += "|";
+            if (regex.length() > 0) {
+                regex.append("|");
             }
-            regex += delimiter;
+            regex.append(delimiter);
         }
-        return regex;
+        return regex.toString();
     }
 
     public List<Integer> getNumbers() {

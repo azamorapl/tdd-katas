@@ -65,6 +65,7 @@ public class DelimiterParser {
 
     private void findInBrackets(String delimiterString) {
         Matcher m = Pattern.compile("\\[(.*?)\\]").matcher(delimiterString);
-        while (m.find()) delimiters.add(Pattern.quote(m.group(1)));
+        while (m.find())
+            delimiters.add(Pattern.quote(m.group(1)));
     }
 }
