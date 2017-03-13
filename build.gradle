@@ -1,3 +1,25 @@
 allprojects{
     group 'com.azamorapl.katas'
 }
+
+apply plugin: 'java'
+
+jar {
+    onlyIf { !sourceSets.main.allSource.files.isEmpty() }
+}
+
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath 'info.solidsoft.gradle.pitest:gradle-pitest-plugin:1.1.11'
+        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.2.1"
+    }
+}
+
+apply from: "$rootDir/quality.gradle"

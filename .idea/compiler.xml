@@ -4,8 +4,8 @@
     <bytecodeTargetLevel>
       <module name="string-calculator_main" target="1.8" />
       <module name="string-calculator_test" target="1.8" />
-      <module name="tdd-katas_main" target="1.5" />
-      <module name="tdd-katas_test" target="1.5" />
+      <module name="tdd-katas_main" target="1.8" />
+      <module name="tdd-katas_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -6,6 +6,8 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/string-calculator/string-calculator_main.iml" filepath="$PROJECT_DIR$/.idea/modules/string-calculator/string-calculator_main.iml" group="string-calculator" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/string-calculator/string-calculator_test.iml" filepath="$PROJECT_DIR$/.idea/modules/string-calculator/string-calculator_test.iml" group="string-calculator" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/tdd-katas.iml" filepath="$PROJECT_DIR$/.idea/modules/tdd-katas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tdd-katas_main.iml" filepath="$PROJECT_DIR$/.idea/modules/tdd-katas_main.iml" group="tdd-katas" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tdd-katas_test.iml" filepath="$PROJECT_DIR$/.idea/modules/tdd-katas_test.iml" group="tdd-katas" />
     </modules>
   </component>
 </project>
