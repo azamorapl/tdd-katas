@@ -1,0 +1,18 @@
+language: java
+script:
+  - ./gradlew clean build jacocoTestReport pitest sonarqube
+  #./ gradlew artifactoryPublish
+jdk:
+  - oraclejdk8
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+addons:
+  sonarcloud:
+    organization: "azamorapl-github"
+    token:
+      secure: "qLw0TozqbLPwCfN/2EH6FmHa+jXdGOSE2v3ushWifijRybLKGdquYpNJw3opBjdbe5+oou+Szs92gz7wSGYFbPemHwPFJyh7IEIHTn+4pOPwqLmoF+LSCWkrf4B7IczHh+0j2oRahSv3qwiS2eFI0PP4nyBoTjfoXTNeIP4YR5Tcet60LdHiWdNsjvBbc53k1PnqbMlNqTnnnXtd/deXPviL4HVtEKfx0gMnB0dddeI/O3CwxzaB64woT9YhuUM5D6mfYqsH1R0NPnZ+XmTBJok/NJYZbAhoOntB8ICnrY5aZSfVP0mR74vrNj3xhTAyTnWbxx2HKwfB4hX2+LoRZIuJB6bocAxoHiliHVOBgjDRkjWXgCXdeOJIr9LxIGcdxqs+zXQulyTtX/LV4mw4JxIBe1Tugw7Yhd8RXGDZEZONFpzHeXZPGBBxZhxStj98q8tNtqd2nlXf7DFCZKxL9CyXNQs92Q7s0Z4+psxovsK/pO4cUYzCC3PFTVG+RIUe06oGuEDoYqdjYcvMrNGM1t00gpzeRUncZOe8MQUAGaLCWVqEyeJ7wswfkoHTOJ9NIR/I9NwPSbrj+970/FUCK9/Ps78pjMzEnv22/Ok0DtZ6FiRYKqTNEoPrLL24wPIpZb1Yk/HexeTCeIIVFFvwQ+RZs5CNGfOCSoYMVvDkjeI="
