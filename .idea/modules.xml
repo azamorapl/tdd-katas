@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/diamond/diamond.iml" filepath="$PROJECT_DIR$/.idea/modules/diamond/diamond.iml" group="diamond" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/diamond/diamond_main.iml" filepath="$PROJECT_DIR$/.idea/modules/diamond/diamond_main.iml" group="diamond" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/diamond/diamond_test.iml" filepath="$PROJECT_DIR$/.idea/modules/diamond/diamond_test.iml" group="diamond" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/string-calculator/string-calculator.iml" filepath="$PROJECT_DIR$/.idea/modules/string-calculator/string-calculator.iml" group="string-calculator" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/string-calculator/string-calculator_main.iml" filepath="$PROJECT_DIR$/.idea/modules/string-calculator/string-calculator_main.iml" group="string-calculator" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/string-calculator/string-calculator_test.iml" filepath="$PROJECT_DIR$/.idea/modules/string-calculator/string-calculator_test.iml" group="string-calculator" />

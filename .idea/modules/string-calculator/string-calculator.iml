@@ -5,6 +5,7 @@
     <content url="file://$MODULE_DIR$/../../../string-calculator">
       <excludeFolder url="file://$MODULE_DIR$/../../../string-calculator/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/../../../string-calculator/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../string-calculator/out" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
